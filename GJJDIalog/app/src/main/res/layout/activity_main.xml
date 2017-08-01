@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240.0dip"
+        android:background="#ff4495fe">
+
+        <ImageView
+            android:id="@+id/progress_animation"
+            android:layout_width="fill_parent"
+            android:layout_height="80.0dip"
+            android:layout_centerVertical="true"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:layout_alignTop="@id/progress_animation"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="刷新"
+            android:background="@color/colorAccent"/>
+    </RelativeLayout>
+</LinearLayout>
