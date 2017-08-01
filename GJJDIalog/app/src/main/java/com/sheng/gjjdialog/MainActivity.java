@@ -24,7 +24,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gjjDrawable.start();
-                gjjDrawable.a(1.0f);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if ( progressInt >= 10) {
+                            gjjDrawable.a(1.0f);
+                        }
+                    }
+                },2000);
             }
         });
         progress = ((TextView) findViewById(R.id.progress));
@@ -51,10 +58,6 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 if ( progressInt >= 10) {
                     gjjDrawable.a(1.0f);
-                }
-                if (100 == progressInt) {
-                    gjjDrawable.a();
-                    gjjDrawable.stop();
                 }
             }
         },2000);
